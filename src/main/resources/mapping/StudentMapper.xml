@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.redis.mapper.StudentMapper" >
+
+	<select id="findAll" resultType="Student" parameterType="hashmap">
+      SELECT * FROM  student limit #{index},#{lim}
+	</select>
+	
+  <select id ="findById" resultType="Student" parameterType="hashmap">
+	 SELECT * FROM student where id=#{id}
+  </select>
+
+  <insert id="saveOrUpdate" parameterType="Student">
+       insert into student(name,age) value (#{name},#{age})
+  </insert>
+
+  <delete id="deleteById" parameterType="Integer">
+      delete  FROM student where id=#{id}
+  </delete>
+  
+
+
+</mapper>
