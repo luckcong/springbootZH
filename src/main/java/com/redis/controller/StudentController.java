@@ -57,6 +57,11 @@ public class StudentController {
     }
 
 
+    @GetMapping("/getTest2")
+    public String getTest3(){
+        return "成功";
+    }
+
 
 
 }
