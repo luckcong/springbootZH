@@ -50,6 +50,7 @@ public class StudentController {
         return list;
     }
 
+    @ResponseBody
     @GetMapping("/getTest")
     public String getTest(){
         return "成功";
