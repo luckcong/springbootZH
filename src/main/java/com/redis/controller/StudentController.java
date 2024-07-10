@@ -68,6 +68,10 @@ public class StudentController {
         return "成功";
     }
 
+    @GetMapping("/getTest6")
+    public String getTest6(){
+        return "成功";
+    }
 
 
 }
