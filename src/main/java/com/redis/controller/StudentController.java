@@ -62,6 +62,7 @@ public class StudentController {
         return "成功";
     }
 
+    @ResponseBody
     @GetMapping("/getTest4")
     public String getTest4(){
         return "成功";
